@@ -16,7 +16,9 @@ function hideModal() {
 }
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') hideModal();
+  if (e.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) hideModal();
+  }
 });
 
 overlay.addEventListener('click', hideModal);
